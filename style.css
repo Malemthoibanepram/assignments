@@ -1,0 +1,153 @@
+/* Form and video layout styles for forms.html */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #ffe0ec 100%);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #4a3c3c;
+}
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 900px;
+  margin: 40px auto;
+  gap: 40px;
+}
+form {
+  background: #fff6fa;
+  max-width: 400px;
+  min-width: 320px;
+  margin: 0;
+  padding: 32px 28px 24px 28px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #ffe0ec;
+  flex-shrink: 0;
+}
+h2 {
+  text-align: center;
+  color: #d72660;
+  margin-top: 32px;
+  margin-bottom: 18px;
+  font-size: 2rem;
+}
+label {
+  font-weight: 500;
+  color: #a23e48;
+  margin-bottom: 4px;
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 4px;
+  margin-bottom: 16px;
+  border: 1.5px solid #ffd6e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1.5px solid #d72660;
+  outline: none;
+}
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+  border: 1.5px solid #a23e48;
+  background: #fff0f6;
+  box-shadow: 0 0 6px #ffd6e0;
+  transition: border 0.2s, background 0.2s, box-shadow 0.2s;
+}
+select:hover,
+select:focus {
+  border: 1.5px solid #a23e48;
+  background: #fff0f6;
+  box-shadow: 0 0 6px #ffd6e0;
+  transition: border 0.2s, background 0.2s, box-shadow 0.2s;
+}
+input[type="checkbox"] {
+  accent-color: #d72660;
+  margin-right: 8px;
+}
+button[type="submit"] {
+  width: 100%;
+  background: #d72660;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #ffe0ec;
+  transition: background 0.2s;
+}
+button[type="submit"]:hover {
+  background: #a23e48;
+}
+.video-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 320px;
+}
+.video-section h3 {
+  text-align: center;
+  color: #d72660;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+.video-section video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #ffe0ec;
+}
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 98vw;
+    margin: 20px auto;
+  }
+  .video-section, form {
+    min-width: 0;
+    max-width: 98vw;
+  }
+  .video-section video {
+    max-width: 98vw;
+  }
+}
+@media (max-width: 500px) {
+  form {
+    padding: 12px 2vw 10px 2vw;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  .video-section video {
+    max-width: 100vw;
+  }
+  .container {
+    gap: 12px;
+    margin: 8px auto;
+  }
+}
