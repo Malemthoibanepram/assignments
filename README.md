@@ -1,5 +1,7 @@
 # Assignment Title
 
-<p style="font-size:16px; color:#333;">
+<p>
   This assignment was created during my class at Optivoxx Technology.
 </p>
+<br>
+<p> Coding with passion
