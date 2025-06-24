@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <style>
+      .clock {
+        background: rgb(237, 238, 240)
+          url("https://www.parentsintouch.co.uk/images/stories/image097.gif")
+          no-repeat center center;
+        width: 20em;
+        height: 20em;
+        background-size: 100%;
+        position: relative;
+        border: 5px solid black;
+        border-radius: 50%;
+        margin: 40px auto;
+      }
+      .hour-container,
+      .minute-container,
+      .second-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 0;
+        height: 0;
+        transform: translate(-50%, -50%);
+      }
+      .hour {
+        width: 0.7em;
+        height: 5em;
+        background: #222;
+        border-radius: 0.35em;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: bottom center;
+        animation: rotate-hour 43200s linear infinite;
+      }
+      .minute {
+        width: 0.4em;
+        height: 7em;
+        background: #444;
+        border-radius: 0.2em;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: bottom center;
+        animation: rotate-minute 3600s linear infinite;
+      }
+      .second {
+        width: 0.2em;
+        height: 9em;
+        background: #e13a3a;
+        border-radius: 0.1em;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: bottom center;
+        animation: rotate-second 60s linear infinite;
+      }
+      .center-dot {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 1em;
+        height: 1em;
+        background: #222;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        border: 2px solid #fff;
+      }
+      @keyframes rotate-hour {
+        100% {
+          transform: translateX(-50%) rotate(360deg);
+        }
+      }
+      @keyframes rotate-minute {
+        100% {
+          transform: translateX(-50%) rotate(360deg);
+        }
+      }
+      @keyframes rotate-second {
+        100% {
+          transform: translateX(-50%) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hour-container">
+        <div class="hour"></div>
+      </div>
+      <div class="minute-container">
+        <div class="minute"></div>
+      </div>
+      <div class="second-container">
+        <div class="second"></div>
+      </div>
+      <div class="center-dot"></div>
+    </div>
+    <footer
+      style="text-align: center; margin-top: 20px; font-family: sans-serif"
+    >
+      Clock developed by Malemthoiba Nepram.
+    </footer>
+  </body>
+</html>
