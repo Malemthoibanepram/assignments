@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clock</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       .clock {
         background: rgb(225, 58, 58) url("image/clock.png") no-repeat center;
@@ -61,18 +69,7 @@
         transform-origin: bottom center;
         animation: rotate-second 60s linear infinite;
       }
-      .center-dot {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 0.5em;
-        height: 0.5em;
-        background: #222;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        border: 2px solid #fff;
-      }
+
       @keyframes rotate-hour {
         100% {
           transform: translateX(-50%) rotate(360deg);
@@ -96,26 +93,70 @@
     </style>
   </head>
   <body>
-    <div class="clock">
-      <div class="hour-container">
-        <div class="hour"></div>
+    <h1
+      style="
+        font-family: 'Cabin Sketch', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #e0e0e0;
+      "
+    >
+      Short note from the Developer
+    </h1>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+        flex-wrap: wrap;
+      "
+    >
+      <p
+        style="
+          font-family: 'Ubuntu', sans-serif;
+          font-weight: 300;
+          font-style: normal;
+          color: #e0e0e0;
+          font-size: 1.2em;
+          line-height: 1.5em;
+          letter-spacing: 1px;
+          width: 30em;
+          max-width: 30vw;
+        "
+      >
+        Time is very important for all of us. <br />
+        We should spend it wisely. The <br />time we spend will never come<br />
+        back. If something bad happened <br />in the past, learn from it. If
+        something <br />good happened, be happy and rejoice in every moment.
+      </p>
+      <div class="clock">
+        <div class="hour-container">
+          <div class="hour"></div>
+        </div>
+        <div class="minute-container">
+          <div class="minute"></div>
+        </div>
+        <div class="second-container">
+          <div class="second"></div>
+        </div>
       </div>
-      <div class="minute-container">
-        <div class="minute"></div>
-      </div>
-      <div class="second-container">
-        <div class="second"></div>
-      </div>
-      <div class="center-dot"></div>
     </div>
     <footer
       style="
         text-align: center;
         margin-top: 20px;
         font-family: Helvetica, Arial, sans-serif;
-        color: #e0e0e0;
+        color: bisque;
         font-size: 1.1em;
         letter-spacing: 1px;
+        background: rgba(44, 44, 44, 0.85); /* subtle dark background */
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
       "
     >
       Clock developed by Malemthoiba Nepram.
