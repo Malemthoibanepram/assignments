@@ -90,6 +90,33 @@
         background-size: cover;
         background-position: center;
       }
+      @keyframes scrollText {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      footer {
+        animation: scrollText 15s linear infinite;
+        text-align: center;
+        margin-top: 20px;
+        font-family: Helvetica, Arial, sans-serif;
+        color: bisque;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        background: rgba(44, 44, 44, 0.85); /* subtle dark background */
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        margin-top: 6.4em;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+        opacity: 1;
+        stroke: #bec1ce;
+      }
     </style>
   </head>
   <body>
@@ -97,9 +124,12 @@
     <h1
       style="
         font-family: 'Cabin Sketch', sans-serif;
-        font-weight: 400;
+        font-weight: 600px;
+        font-size: 2.5em;
         font-style: normal;
         color: #e0e0e0;
+        margin-left: 0.7em;
+        margin-bottom: -2em;
       "
     >
       Short note from the Developer
@@ -113,24 +143,26 @@
         flex-wrap: wrap;
       "
     >
-      <p
+      <pre
         style="
           font-family: 'Ubuntu', sans-serif;
           font-weight: 300;
           font-style: normal;
           color: #e0e0e0;
-          font-size: 1.2em;
+          font-size: 1.4em;
           line-height: 1.5em;
           letter-spacing: 1px;
           width: 30em;
           max-width: 30vw;
         "
       >
-        Time is very important for all of us. <br />
-        We should spend it wisely. The <br />time we spend will never come<br />
-        back. If something bad happened <br />in the past, learn from it. If
-        something <br />good happened, be happy and rejoice in every moment.
-      </p>
+    Time is very important for all of us.
+    We should spend it wisely. 
+    The time we spend will never come back.
+    If something bad happened in the past, 
+    learn from it. If something good happened,
+    be happy and rejoice in every moment.
+      </pre>
       <div class="clock">
         <div class="hour-container">
           <div class="hour"></div>
@@ -143,24 +175,6 @@
         </div>
       </div>
     </div>
-    <footer
-      style="
-        text-align: center;
-        margin-top: 20px;
-        font-family: Helvetica, Arial, sans-serif;
-        color: bisque;
-        font-size: 1.1em;
-        letter-spacing: 1px;
-        background: rgba(44, 44, 44, 0.85); /* subtle dark background */
-        height: 50px;
-        line-height: 50px;
-        width: 100%;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
-      "
-    >
-      Clock developed by Malemthoiba Nepram.
-    </footer>
+    <footer>Clock developed by Malemthoiba Nepram.</footer>
   </body>
 </html>

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration form</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -49,12 +53,39 @@
       </form>
       <div class="video-section">
         <h3>A random Video</h3>
-        <video controls poster="https://www.w3schools.com/html/mov_bbb.jpg">
-          <source
-            src="https://www.w3schools.com/html/mov_bbb.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <div style="width: 400px; height: 300px; overflow: hidden">
+          <video
+            controls
+            style="
+              margin-left: -10px;
+              margin-top: -104px;
+              width: 600px;
+              height: 400px;
+            "
+          >
+            <source
+              src="image/69373249165447c5bf62e5a75254ec5e.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p
+          style="
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            color: #0b0101;
+            font-size: 1.2em;
+            line-height: 1.5em;
+            letter-spacing: 1px;
+            width: 30em;
+            max-width: 30vw;
+          "
+        >
+          This is a random video that I found on the internet. It is not related
+          to the registration form.
+        </p>
       </div>
     </div>
   </body>
